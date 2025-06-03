@@ -1,0 +1,604 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+/*  home page */
+.landingPageContainer {
+  height: 100vh;
+  width: 100vw;
+  background: url("/bgvmeetup2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+/* .landingPageContainer nav {
+  padding: 1.6rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.landingPageContainer nav h2 {
+  font-size: 2.6rem;
+  font-weight: 100;
+} */
+
+.landingPageContainer nav {
+  padding: 1.6rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landingPageContainer nav h2 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #e0f7ff;
+  letter-spacing: 1px;
+  text-shadow: 0 0 6px rgba(0, 209, 255, 0.5), 0 0 12px rgba(0, 209, 255, 0.3);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  transition: text-shadow 0.3s ease;
+}
+
+.landingPageContainer nav [role="button"] a {
+  padding: 0.6rem 3rem;
+  background-color: #ff7a00;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 0 8px rgba(255, 122, 0, 0.3);
+}
+
+.landingPageContainer nav [role="button"] a:hover {
+  background-color: #ff912b;
+  box-shadow: 0 0 12px rgba(255, 122, 0, 0.6);
+}
+
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3rem;
+  height: 80vh;
+  align-items: center;
+}
+.landingMainContainer > div:first-child {
+  max-width: 70%;
+}
+
+.landingMainContainer h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.landingMainContainer h1 span {
+  color: #ff9839;
+  text-shadow: 0 0 8px rgba(255, 152, 57, 0.4); /* soft glow for 'Connect' */
+}
+.landingMainContainer p span {
+  color: #ff9839;
+  text-shadow: 0 0 8px rgba(255, 152, 57, 0.4); /* soft glow for 'Connect' */
+}
+.landingMainContainer p {
+  font-size: 2.1rem;
+  color: #dddddd;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 700;
+}
+
+.landingMainContainer p:last-of-type {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #bbbbbb;
+  font-style: italic;
+  margin-top: 0.6rem;
+}
+
+.landingMainContainer > div:nth-child(2) img {
+  height: 60vh;
+  width: auto;
+  margin-top: 2rem;
+}
+/* authentication page */
+.auth-container {
+  display: flex;
+  height: 100vh;
+  background-color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.auth-left {
+  flex: 2;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-left img {
+  max-width: 60%;
+  margin-top: 5rem;
+  object-fit: contain;
+}
+
+.auth-box {
+  flex: 1.1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+}
+
+.auth-icon {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.auth-toggle button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.auth-toggle button.active {
+  color: #ff9839;
+  border-bottom: 2px solid #ff9839;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+/* 
+.auth-submit {
+  padding: 0.5rem ;
+  background-color: #480299;
+  color: white;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 40%;
+  align-self: center;
+  transition: background 0.3s;
+}
+
+.auth-submit:hover {
+  background-color: #e07d1e;
+} */
+.auth-submit {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #6e00ff, #9f00ff);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 250px;
+  align-self: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(110, 0, 255, 0.3);
+}
+
+.auth-submit:hover {
+  background: linear-gradient(135deg, #ff6a00, #ff9f00);
+  box-shadow: 0 8px 16px rgba(255, 110, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.auth-error {
+  color: red;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.auth-snackbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth-snackbar button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* .auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.auth-box {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+} */
+
+/* .auth-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.auth-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.auth-toggle button {
+  flex: 1;
+  padding: 10px;
+  background: none;
+  border: 2px solid #1e2a78;
+  color: #1e2a78;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.auth-toggle button.active,
+.auth-toggle button:hover {
+  background-color: #1e2a78;
+  color: white;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 10px;
+  background-color: #1e2a78;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.auth-submit:hover {
+  background-color: #151d56;
+}
+
+.auth-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.auth-snackbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #00ffb2;
+  color: #1d1d1f;
+  padding: 12px 20px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: bold;
+}
+
+.auth-snackbar button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+} */
+/* home */
+/* General Layout */
+.homeContainer {
+  height: 100vh;
+  background-color: #000d1a;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+/* NAVBAR */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #00d1ff;
+  text-shadow: 0 0 10px #00d1ff;
+}
+
+/* NAV BUTTONS */
+.navBar div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navBar p {
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: #ff7a00;
+  padding: 0.4rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000050;
+  transition: background-color 0.3s ease;
+}
+
+.navBar p:hover {
+  background-color: #e06600;
+}
+
+/* Logout Button */
+
+.logoutButton:hover {
+  background-color: #ff7a00;
+  padding: 0.4rem 0.3rem;
+
+  color: white;
+}
+
+/* MEET SECTION */
+.meetContainer {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px;
+}
+
+/* LEFT PANEL */
+.leftPanel {
+  flex: 1.1;
+}
+.tagline {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #00d1ff;
+  text-shadow: 0 0 8px #00d1ff88;
+  margin-bottom: 30px;
+
+  line-height: 1.4;
+}
+.leftPanel .heroinput {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Input field */
+.heroinput input {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  width: 250px;
+  background-color: #ffffff;
+  color: #1d1d1f;
+  box-shadow: 0 0 8px #00d1ff40;
+  transition: box-shadow 0.3s ease;
+}
+
+.heroinput input::placeholder {
+  color: #7a7a8c;
+}
+
+/* Glowing focus effect */
+.heroinput input:focus {
+  box-shadow: 0 0 12px #00d1ff;
+}
+
+/* Join button */
+.heroinput button {
+  background-color: #ff7a00 !important;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000050;
+  text-transform: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.heroinput button:hover {
+  background-color: #e06600 !important;
+  transform: scale(1.05);
+}
+
+/* RIGHT PANEL */
+.rightPanel {
+  flex: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightPanel img {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00000080;
+}
+/* lobbdy */
+
+.lobby-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  height: 100vh;
+  max-width: 70vw;
+  margin: 0 auto;
+  
+}
+
+.lobby-title {
+  font-size: 1.75rem;        /* ~28px, scalable */
+  font-weight: 600;          /* Semi-bold */
+  color: #222;               /* Dark but softer than pure black */
+  margin-bottom: 1rem;       /* Comfortable spacing below */
+  text-align: center;        /* Center aligned */
+  width: 100%;               /* Full container width */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.2;          /* Tight line spacing */
+}
+
+
+.lobby-main {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+}
+
+.input-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  max-width: 400px;
+}
+
+.lobby-input {
+  flex-grow: 1;
+}
+
+.lobby-button {
+  flex-shrink: 0;
+}
+
+.video-container {
+  flex: 1;
+  max-width: 480px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lobby-video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background-color: black;
+}
+/* history */
+/* Color Palette */
+:root {
+  --deep-blue: #1E2A78;
+  --accent-cyan: #00D1FF;
+  --success-green: #00FFB2;
+  --soft-red: #FF4F5A;
+  --light-gray: #F5F6FA;
+  --dark-text: #1D1D1F;
+  --muted-gray: #7A7A8C;
+}
+
+.history-container {
+  padding: 1.5rem;
+  background-color: var(--light-gray);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--dark-text);
+}
+
+.home-button {
+  background-color: var(--accent-cyan);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.history-card {
+  border: 1px solid var(--muted-gray);
+  border-radius: 12px;
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.meeting-code {
+  font-size: 0.95rem;
+  color: var(--muted-gray);
+  margin-bottom: 0.3rem;
+}
+
+.meeting-date {
+  font-size: 1rem;
+  color: var(--dark-text);
+}
